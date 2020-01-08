@@ -8,8 +8,9 @@ import SignUpFormContainer from './session_form/signup_form_container';
 const App = () => (
   <div>
     <header>
-      <h1>MINDSCAPE</h1>
-      <GreetingContainer />
+      <nav>
+        <GreetingContainer />
+      </nav>
     </header>
 
     <Route path="/login" component={LogInFormContainer} />
