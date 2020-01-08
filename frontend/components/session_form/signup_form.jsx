@@ -26,7 +26,7 @@ class signupForm extends React.Component {
 
   renderErrors() {
     return (
-      <ul>
+      <ul className="submit-errors">
         {this.props.errors.map((error, i) => (
           <li key={`error-${i}`}>
             {error}
@@ -38,41 +38,47 @@ class signupForm extends React.Component {
 
   render() {
     return (
-      <div className="signup-form-container">
-        <form onSubmit={this.handleSubmit} className="signup-form-box">
-          <title className="signup-title">Join Mindscape</title>
+      <div className="login-form-container">
+        <form onSubmit={this.handleSubmit} className="login-form-box">
+
+          <h2 className="login-greeting">Join</h2>
+          <h1 className="login-title">Mindscape</h1>
           <br />
-          Please {this.props.formType} or {this.props.otherForm}
+          <small>Immerse yourself into infinite possibilities</small>
           <div onClick={this.props.closeModal} className="close-x">×</div>
-          {this.renderErrors()}
-          <div className="signup-form">
+
+          <div className="login-form">
             <br />
-            <label>Email:
-              <input type="text"
+            <label>
+              <input type="email"
                 value={this.state.email}
                 onChange={this.update('email')}
-                className="signup-input"
+                placeholder="Email address..."
+                className="input-control"
               />
             </label>
             <br />
-            <label>Username:
+            <label>
               <input type="text"
                 value={this.state.username}
                 onChange={this.update('username')}
-                className="signup-input"
+                placeholder="Username..."
+                className="input-control"
               />
             </label>
             <br />
-            <label>Password:
+            <label>
               <input type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
-                className="signup-input"
+                placeholder="Password..."
+                className="input-control"
               />
             </label>
             <br />
-            <input className="signup-submit" type="submit" value={this.props.formType} />
+            <input className="session-submit" type="submit" value="Log In" />
           </div>
+          {this.renderErrors()}
         </form>
       </div>
     );

@@ -5,7 +5,7 @@ class SessionForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: '',
+      email: '',
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -25,7 +25,7 @@ class SessionForm extends React.Component {
 
   renderErrors() {
     return (
-      <ul>
+      <ul className="submit-errors">
         {this.props.errors.map((error, i) => (
           <li key={`error-${i}`}>
             {error}
@@ -39,31 +39,36 @@ class SessionForm extends React.Component {
     return (
       <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          <title className="login-title">Welcome Back</title> 
+          
+          <h2 className="login-greeting">Welcome Back to</h2> 
+          <h1 className="login-title">Mindscape</h1> 
           <br />
-          Step into another world
+          <small>Step into the world of your dreams</small>
           <div onClick={this.props.closeModal} className="close-x">×</div>
-          {this.renderErrors()}
+          
           <div className="login-form">
             <br />
-            <label>Username:
+            <label>
               <input type="text"
                 value={this.state.username}
                 onChange={this.update('username')}
-                className="login-input"
+                placeholder="Email address..."
+                className="input-control"
               />
             </label>
             <br />
-            <label>Password:
+            <label>
               <input type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
-                className="login-input"
+                placeholder="Password..."
+                className="input-control"
               />
             </label>
             <br />
-            <input className="session-submit" type="submit" value={this.props.formType} />
+            <input className="session-submit" type="submit" value="Log In"/>
           </div>
+          {this.renderErrors()}
         </form>
       </div>
     );
