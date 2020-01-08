@@ -1,7 +1,6 @@
-import * as APIUtil from '../util/session_api_utils';
+import * as APIUtil from '../util/session_api_utils'
 
 export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
-export const LOGOUT_CURRENT_USER = 'LOGOUT_CURRENT_USER';
 export const RECEIVE_SESSION_ERRORS = 'RECEIVE_SESSION_ERRORS';
 
 export const receiveCurrentUser = currentUser => ({
@@ -9,29 +8,29 @@ export const receiveCurrentUser = currentUser => ({
   currentUser
 });
 
-export const logoutCurrentUser = () => ({
-  type: LOGOUT_CURRENT_USER
-});
-
-export const receiveSessionErrors = errors => ({
+export const receiveErrors = errors => ({
   type: RECEIVE_SESSION_ERRORS,
   errors
 });
 
 export const signup = user => dispatch => (
-  APIUtil.signup(user).then(user => (dispatch(receiveCurrentUser(user))
+  APIUtil.signup(user).then(user => (
+    dispatch(receiveCurrentUser(user))
   ), err => (
-    dispatch(receiveSessionErrors(err.responseJSON))
+    dispatch(receiveErrors(err.responseJSON))
   ))
 );
 
 export const login = user => dispatch => (
-  APIUtil.login(user).then(user => (dispatch(receiveCurrentUser(user))
+  APIUtil.login(user).then(user => (
+    dispatch(receiveCurrentUser(user))
   ), err => (
-    dispatch(receiveSessionErrors(err.responseJSON))
+    dispatch(receiveErrors(err.responseJSON))
   ))
 );
 
 export const logout = () => dispatch => (
-  APIUtil.logout().then(user => dispatch(logoutCurrentUser()))
+  APIUtil.logout().then(user => (
+    dispatch(receiveCurrentUser(null))
+  ))
 );
