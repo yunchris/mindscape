@@ -7,12 +7,13 @@ import GreetingContainer from './greeting/greeting_container';
 const App = () => (
   <div>
     <Modal />
-    <header>
-      <Link to="/" className="header-link">
-        <h1>Mindscape</h1>
-      </Link>
-      <GreetingContainer />
-    </header>
+    <navbar>
+      
+      <div className="nav-item"><Link to="/"><img src={window.logo} className="logo"/></Link></div>
+      <div className="nav-item"></div>
+      <div className="nav-item"></div>
+      <div className="nav-item"><GreetingContainer /></div>
+    </navbar>
   </div>
 );
 
