@@ -50,8 +50,8 @@ class SessionForm extends React.Component {
             <br />
             <label>
               <input type="text"
-                value={this.state.username}
-                onChange={this.update('username')}
+                value={this.state.email}
+                onChange={this.update('email')}
                 placeholder="Email address..."
                 className="input-control"
               />
