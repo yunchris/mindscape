@@ -7,9 +7,11 @@ import { CLOSE_MODAL } from '../actions/modal_actions';
 
 export default (state = [], action) => {
   Object.freeze(state);
+  let nextState = [];
   switch (action.type) {
     case RECEIVE_SESSION_ERRORS:
-      return action.errors;
+      const lina = action.errors ? action.errors : []
+      return lina;
     case RECEIVE_CURRENT_USER:
     case CLOSE_MODAL:
       return [];
