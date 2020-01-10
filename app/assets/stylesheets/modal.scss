@@ -1,15 +1,5 @@
 // Modal styles
 
-// @keyframes modalUp {
-//   0% {top: 250px;}
-//   100% {top: 0px;}
-// }
-
-// .modal-background #modalUp {
-//   animation-name: modalUp;
-//   animation-duration: 0.8s;
-// }
-
 .modal-background {
   position: fixed;
   top: 0;
@@ -22,12 +12,12 @@
 
 @keyframes modalDown {
   0% {top: 0px;}
-  100% {top: 250px;}
+  100% {top: 220px;}
 }
 
 .modal-child > .login-form-container, .signup-form-container {
   position: absolute;
-  top: 250px;
+  top: 220px;
   left: 50%;
   transform: translate(-50%, -200px);
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
