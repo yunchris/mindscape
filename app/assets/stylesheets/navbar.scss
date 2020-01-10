@@ -4,28 +4,45 @@ navbar {
   display: flex;
 }
 
-.logo {
-  height: 60px;
-  float: left;
-}
-
 .nav-container {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  padding: 10px;
   height: 70px;
   width: 100%;
   position: fixed;
   top: 0;
 }
 
-.nav-left {
-  padding: 5px 20px 10px 10px;
-  font-size: 30px;
+.header {
+  width: 100%;
+  position: fixed;
 }
 
-.nav-right {
-  padding: 7px 30px 10px 20px;
+#header-full {
+  padding: 10px;
+}
+#header-scroll {
+  height: 50px;
+  background-color: black;
+}
+
+.logo {
+  height: 60px;
+  float: left;
+}
+
+.logo-scroll {
+  height: 40px;
+  float: left;
+  padding: 7px 0px 7px 20px;
+}
+
+.nav-links {
+  padding: 4px 30px 10px 20px;
+  font-size: 30px;
+  text-align: right;
+}
+
+.nav-links-scroll {
+  padding: 0px 20px 10px 20px;
   font-size: 30px;
   text-align: right;
 }
@@ -81,7 +98,6 @@ navbar {
 
 .login-button:hover {
   border-bottom-width: 2px;
-  // color: #f7398a;
   border-bottom-style: solid;
   border-bottom-color: #f7398a;
   background-color: transparent;
@@ -138,3 +154,4 @@ navbar {
 .header-greet {
   margin-left: 7px;
 }
+
