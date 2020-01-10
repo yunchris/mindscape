@@ -10,9 +10,6 @@ export default () => (
           Custom designed realities are here. <br />
           Book a Mindscape. Live your fantasy. <br/>
         </p>
-        {/* <p className="hero-ender">
-          World of Your Dreams
-        </p> */}
         <br/>
         <div className ="search-container">
           {/* <form action="">

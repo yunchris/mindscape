@@ -6,6 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+# ActiveRecord::Base.connection.reset_pk_sequence!('users')
+ActiveRecord::Base.connection.execute("TRUNCATE TABLE users RESTART IDENTITY")
+
 ApplicationRecord.transaction do
   User.destroy_all
+
+  User.create(first_name: 'Guest', last_name: 'User', email: 'guest@guest.com', password: 'guestguest')
 end
