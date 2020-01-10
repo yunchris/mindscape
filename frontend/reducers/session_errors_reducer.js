@@ -1,7 +1,4 @@
-import {
-  RECEIVE_SESSION_ERRORS,
-  RECEIVE_CURRENT_USER,
-} from '../actions/session_actions';
+import { RECEIVE_SESSION_ERRORS, RECEIVE_CURRENT_USER, CLEAR_ERRORS } from '../actions/session_actions';
 
 import { CLOSE_MODAL } from '../actions/modal_actions';
 
@@ -13,6 +10,7 @@ export default (state = [], action) => {
       const lina = action.errors ? action.errors : []
       return lina;
     case RECEIVE_CURRENT_USER:
+    case CLEAR_ERRORS:
     case CLOSE_MODAL:
       return [];
 

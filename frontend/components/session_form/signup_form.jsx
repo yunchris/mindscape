@@ -2,6 +2,11 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 
 class signupForm extends React.Component {
+
+  componentDidMount() {
+    this.props.clearErrors();
+  }
+
   constructor(props) {
     super(props);
     this.state = {
@@ -21,7 +26,6 @@ class signupForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    // const user = Object.assign({}, this.state);
     this.props.processForm(this.state).then(this.props.closeModal);
   }
 
@@ -39,34 +43,36 @@ class signupForm extends React.Component {
 
   render() {
     return (
-      <div className="login-form-container">
-        <form onSubmit={this.handleSubmit} className="login-form-box">
+      <div className="signup-form-container">
+        <form onSubmit={this.handleSubmit} className="signup-form-box">
 
-          <h2 className="login-greeting">Join</h2>
-          <h1 className="login-title">Mindscape</h1>
+          <h2 className="signup-form-greeting">Join</h2>
+          <h1 className="signup-form-title">Mindscape</h1>
           <br />
           <small>Infinite Worlds Await You</small>
           <div onClick={this.props.closeModal} className="close-x">×</div>
 
-          <div className="login-form">
+          <div className="signup-form">
             <br />
-            <label>
-              <input type="text"
-                value={this.state.first_name}
-                onChange={this.update('first_name')}
-                placeholder="First name..."
-                className="input-control"
-              />
-            </label>
-            <div></div>
-            <label>
-              <input type="text"
-                value={this.state.last_name}
-                onChange={this.update('last_name')}
-                placeholder="Last name..."
-                className="input-control"
-              />
-            </label>
+            <div className="signup-form-name">
+              <label>
+                <input type="text"
+                  value={this.state.first_name}
+                  onChange={this.update('first_name')}
+                  placeholder="First Name..."
+                  className="input-control"
+                />
+              </label>
+              <div></div>
+              <label>
+                <input type="text"
+                  value={this.state.last_name}
+                  onChange={this.update('last_name')}
+                  placeholder="Last Name..."
+                  className="input-control"
+                />
+              </label>
+            </div>
             <br />
             <label>
               <input type="email"
@@ -86,11 +92,14 @@ class signupForm extends React.Component {
               />
             </label>
             <br />
-            <input className="session-submit" type="submit" value="Sign Up" />
+            <input className="signup-submit-button" type="submit" value="Sign Up" />
           </div>
-          <p>Already a member? </p>
           {this.renderErrors()}
         </form>
+        <div className="small2">Already a member?
+          <br/> 
+          <a className="modal-links" onClick={this.props.openLoginModal}>Log In Here</a> 
+        </div>
       </div>
     );
   }
