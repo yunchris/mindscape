@@ -57,7 +57,7 @@ class LoginForm extends React.Component {
           <small>Step Into Your Customized Dream</small>
           <div onClick={this.props.closeModal} className="close-x">×</div>
           <br/>
-          <button className="demo-login-button" onClick={this.demologin} >Demo Log In</button>
+          <button className="demo-login-button" onClick={this.demologin} type="button">Demo Log In</button>
           <br/>
           <div className="or"> <span>or</span> </div>
           <div className="login-form">
@@ -80,7 +80,7 @@ class LoginForm extends React.Component {
               />
             </label>
             <br/>
-            <input className="login-submit-button" type="button" value="Log In"/>
+            <input className="login-submit-button" type="submit" value="Log In"/>
           </div>
           
           {this.renderErrors()}
