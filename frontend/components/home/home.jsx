@@ -6,12 +6,29 @@ export default () => (
       <div className="hero-container">
         <h1 className="hero-greeting">Infinity Awaits</h1>
         <p className="hero-copy">
-          Book customized virtual adventures, <br/>
-          plug into the world of your dreams, <br/>
-          
+          Step into a world of possibilities. <br />
+          Custom designed realities are here. <br />
+          Book a Mindscape. Live your fantasy. <br/>
         </p>
+        {/* <p className="hero-ender">
+          World of Your Dreams
+        </p> */}
         <br/>
-        <div className ="search-box">""</div>
+        <div className ="search-container">
+          {/* <form action="">
+            <label>
+              <input type="text"
+                value={}
+                onChange={this.update('search')}
+                placeholder="Search..."
+                className="searchbox"
+              />
+            </label>
+            <div className="dateselect"></div>
+            <div className="categoryselect"></div>
+            <button className="search">SEARCH</button>
+          </form> */}
+        </div>
       </div>
     </div>
   </div>
