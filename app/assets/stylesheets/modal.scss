@@ -6,7 +6,7 @@
   bottom: 0;
   right: 0;
   left: 0;
-  background: rgba(223, 223, 223, 0.7);
+  background: rgba(112, 112, 112, 0.8);
   z-index: 10;
 }
 
@@ -17,16 +17,21 @@
 
 .modal-child > .login-form-container, .signup-form-container {
   position: absolute;
-  top: 220px;
+  top: 240px;
   left: 50%;
   transform: translate(-50%, -200px);
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-  background-color: white;
+  background-color: whitesmoke;
   padding: 40px;
   height: auto;
   width: 350px;
   animation-name: modalDown;
-  animation-duration: 0.5s;
+  animation-duration: 0.3s;
+  background-image: image-url("mindgif.gif");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: center;
 }
 
 .close-x {

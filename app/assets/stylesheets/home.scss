@@ -1,47 +1,83 @@
-/* Home */
-
 .hero-section {
-  height: 700px;
+  height: 500px;
+  width: 100%;
+  display: inline-table;
   background-size: cover;
-  background-image: image-url("mindscape.jpg");
-  display: flex;
-  align-items: center;
-  // z-index: -1;
+  background-image: image-url("backgrounds/home.jpg");
   background-attachment: fixed;
   background-position: top;
   background-repeat: no-repeat;
-  background-size: cover;
 }
 
-.hero-container {
+.content-container {
+  margin: auto;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.welcome-container {
   color: white;
-  padding: 0px 60px 0px 60px;
-  width: 100%;
+  padding-top: 140px;
+  display: grid;
+  
 }
 
-.hero-greeting {
-  font-size: 48px;
+.welcome-greeting-title {
+  font-size: 46px;
   font-weight: 600;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Raleway', sans-serif;
   text-shadow: 2px 2px 2px black;
 }
 
-.hero-copy {
-  font-size: 20px;
+.welcome-copy {
+  font-size: 18px;
   font-family: 'Raleway', sans-serif;
   padding-top: 20px;
-  padding-bottom: 15px;
   font-weight: 200;
   line-height: 1.5;
   text-shadow: 2px 2px 2px black;
-}
- 
-.search-container {
-  height: 100px;
-  width: 100%;
-  border-radius: 5px;
-  background-color: white;
-  box-shadow: 0 5px 15px black;
-  opacity: 0.7;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  box-sizing: border-box;
 }
 
+
+// Mobile responsive
+
+@media (max-width: 1000px) {
+  .welcome-copy {
+    display: block;
+  }
+
+  .hero-section {
+    height: 550px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .content-container {
+    width: 1100px;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+  .content-container {
+    // width: 900px;
+    width: 1000px;
+  }
+}
+
+@media (min-width: 760px) and (max-width: 999px) {
+  .content-container {
+    width: 750px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (min-width: 0) and (max-width: 759px) {
+  .content-container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}

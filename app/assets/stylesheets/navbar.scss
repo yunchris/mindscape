@@ -19,6 +19,8 @@ navbar {
 
 #header-full {
   padding: 10px;
+  display: flex;
+  justify-content: space-between;
 }
 #header-scroll {
   height: 50px;
@@ -26,18 +28,19 @@ navbar {
 }
 
 .logo {
-  height: 60px;
+  height: 50px;
   float: left;
+  padding: 5px 0px 0px 10px;
 }
 
 .logo-scroll {
-  height: 40px;
+  height: 45px;
   float: left;
-  padding: 7px 0px 7px 20px;
+  padding: 10px 0px 0px 20px;
 }
 
 .nav-links {
-  padding: 4px 30px 10px 20px;
+  padding: 4px 10px 10px 20px;
   font-size: 30px;
   text-align: right;
 }
@@ -95,6 +98,8 @@ navbar {
   background-color: transparent;
   color: white;
   cursor: pointer;
+  transition: all ease-in-out .3s;
+  border-bottom: 1px solid transparent;
 }
 
 .login-button:hover {
@@ -121,13 +126,14 @@ navbar {
   border-color: white;
   border-width: 1px;
   border-style: solid;
-  border-radius: 2px;
+  border-radius: 1px;
   font-size: 16px;
   color: white;
   padding: 7px 14px 7px 14px;
   margin: 10px 5px 5px 5px;
   font-family: Arial, Helvetica, sans-serif;
   cursor: pointer;
+  transition: all ease-in-out .3s;
 }
 
 .signup-button:hover, .logout-button:hover {
@@ -155,4 +161,3 @@ navbar {
 .header-greet {
   margin-left: 7px;
 }
-

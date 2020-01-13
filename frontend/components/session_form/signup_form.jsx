@@ -49,7 +49,7 @@ class signupForm extends React.Component {
           <h2 className="signup-form-greeting">Join</h2>
           <h1 className="signup-form-title">Mindscape</h1>
           <br />
-          <small>Infinite Worlds Await You</small>
+          {/* <small>Infinite Worlds Await You</small> */}
           <div onClick={this.props.closeModal} className="close-x">×</div>
 
           <div className="signup-form">

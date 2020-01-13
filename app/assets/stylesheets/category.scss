@@ -1,0 +1,213 @@
+.category-section {
+  height: 700px;
+  width: 100%;
+  background-size: cover;
+  background-image: image-url("backgrounds/home.jpg");
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.category-message {
+  color: white;
+  margin-bottom: 40px;
+  font-size: 22px
+}
+
+.category-container {
+  margin: auto;
+  padding: 0px 60px 0px 60px;
+  display: flex;
+}
+
+.category-container > div {
+  width: 100%;
+  margin: 20px;
+}
+
+.category-container img{
+  display: flex;
+  width: 33.33%;
+  padding-top: 20px;
+  padding-right: 20px;
+}
+
+
+// Category card section 
+
+// h2{
+//   pointer-events:none;
+// }
+
+body {
+  background-color: rgba(255, 255, 255, .5);
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+
+  .divider {
+    width: 40px;
+  }
+
+  .card {
+    position: relative;
+    border: 5px solid rgba(255, 255, 255, .9);;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    margin-bottom: 10px;
+
+    ul {
+      z-index: 5;
+      position: absolute;
+      left: 39px;
+      top: 5px;
+      list-style-type: none;
+      li {
+        width: 2px;
+        height: 2px;
+        border-radius: 2px;
+        margin: 6px 0;
+        background-color: #E6E5E1;;
+      }
+    }
+    h2 {
+      z-index: 5;
+      font-family: "Poppins", sans-serif;
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      font-size: 50px;
+      font-weight: 700;
+      color: #fff;
+      text-shadow: 0px 0px 5px black;
+    }
+
+    p {
+      z-index: 5;
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      color: transparent;
+      font-size: 14px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      -webkit-transition: all 0.2s ease;
+      transition: all 0.2s ease;
+    }
+    .pic {
+      z-index: 6;
+      width: 100%;
+      height: 100%;
+      background-image: image-url("categories/scifi.jpg");
+      background-size: 100% 100%;
+      filter: grayscale(50%);
+      transition: all ease-in-out .5s; 
+    }
+
+    &:hover p {
+      color: #fff;
+      text-shadow: 0px 1px 5px black;
+    }
+    
+    &:hover .pic {
+      cursor: pointer;
+      outline:none;
+      transition: all 0.3s ease;
+      filter: grayscale(0%);
+      transform: scale(1.1);
+    }
+  }
+
+  .scifi {
+    .pic {
+      background-image: image-url("categories/scifi.jpg");
+    }
+  }
+
+  .horror {
+    .pic {
+      background-image: image-url("categories/horror.jpg");
+    }
+  }
+
+  .fantasy {
+    .pic {
+      background-image: image-url("categories/fantasy.jpg");
+    }
+  }
+
+  .past {
+    .pic {
+      background-image: image-url("categories/past.jpg");
+    }
+  }
+
+  .present {
+    .pic {
+      background-image: image-url("categories/realworld.jpg");
+    }
+  }
+
+  .romance {
+    .pic {
+      background-image: image-url("categories/romance.jpg");
+    }
+  }
+  
+}
+
+@media (max-width: 999px) {
+  .container {
+    display: block;
+  }
+}
+
+.dr {
+position: absolute;
+  bottom: 16px; 
+  right: 16px;
+  width:100px;
+}
+
+// Mobile responsive
+
+@media only screen and (min-width: 1200px) {
+  .category-container {
+    width: 1100px;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+  .category-container {
+    // width: 900px;
+    width: 1000px;
+  }
+}
+
+@media (min-width: 760px) and (max-width: 999px) {
+  .category-container {
+    width: 750px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .category-section {
+    height: 1650px;
+  }
+}
+
+@media (min-width: 0) and (max-width: 759px) {
+  .category-container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .category-section {
+    height: 1650px;
+  }
+}

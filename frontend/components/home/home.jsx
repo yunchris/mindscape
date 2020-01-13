@@ -1,32 +1,25 @@
 import React from 'react';
+import Hero from './hero';
+import Category from './category';
 
-export default () => (
-  <div className="home">
-    <div className="hero-section">
-      <div className="hero-container">
-        <h1 className="hero-greeting">Infinity Awaits</h1>
-        <p className="hero-copy">
-          Step into a world of possibilities. <br />
-          Custom designed realities are here. <br />
-          Book a Mindscape. Live your fantasy. <br/>
-        </p>
-        <br/>
-        <div className ="search-container">
-          {/* <form action="">
-            <label>
-              <input type="text"
-                value={}
-                onChange={this.update('search')}
-                placeholder="Search..."
-                className="searchbox"
-              />
-            </label>
-            <div className="dateselect"></div>
-            <div className="categoryselect"></div>
-            <button className="search">SEARCH</button>
-          </form> */}
-        </div>
+export default class Home extends React.Component {
+
+  render() {
+    return (
+      <div className="home">
+        <Hero />
+        <Category />
+        <div className="about2"></div>
+        <div className="filler2"></div>
+        <div className="about3"></div>
+        <div className="filler1"></div>
+        <div className="about1"></div>
+        <div className="filler1"></div>
+        <div className="about4"></div>
+        <div className="filler1"></div>
+        <div className="about5"></div>
+        <div className="filler1"></div>
       </div>
-    </div>
-  </div>
-)
+    );
+  }
+};

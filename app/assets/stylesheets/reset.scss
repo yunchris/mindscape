@@ -13,12 +13,17 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
 	font-size: 100%;
 	font-family: 'Raleway', sans-serif;
   vertical-align: bottom;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  box-sizing: border-box;
 }
 
 ul {
@@ -30,4 +35,18 @@ button {
    -webkit-appearance: none;
   -moz-appearance: none;
   background-color: transparent;
+}
+
+button:focus, input:focus, select:focus {
+  outline: none;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+select::-ms-expand {
+    display: none;
 }
