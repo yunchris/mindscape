@@ -25,6 +25,9 @@ document.addEventListener('DOMContentLoaded', () => {
   window.dispatch = store.dispatch;
   window.fetchScapes = fetchScapes;
 
+  
+  parent.scrollTo(0, 0);
+
 
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store} />, root);

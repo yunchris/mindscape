@@ -19,6 +19,9 @@ class ScapesIndex extends React.Component {
     $('input[name="calendar"]').on('cancel.daterangepicker', function (ev, picker) {
       $(this).val('');
     });
+
+    parent.scrollTo(0, 0);
+
   };
 
   render () {

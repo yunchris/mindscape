@@ -9,8 +9,8 @@ const Navbar = () => {
       $('#header-scroll').slideDown(500);
       $('#header-full').slideUp(50);
     } else {
-      $('#header-scroll').slideUp(500);
-      $('#header-full').slideDown(500);
+      $('#header-scroll').slideUp(50);
+      $('#header-full').slideDown(50);
     }
   });
 
