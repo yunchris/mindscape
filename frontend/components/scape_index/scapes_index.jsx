@@ -1,5 +1,6 @@
 import React from 'react';
 import ScapeIndexItem from './scapes_index_item'; 
+import Search from '../search/search';
 
 class ScapesIndex extends React.Component {
   componentDidMount() {
@@ -47,7 +48,9 @@ class ScapesIndex extends React.Component {
                   ))
                 }
               </ul>
-              <div className="map"></div>
+              <div className="map">
+                <Search />
+              </div>
             </div>
           </div>
         </div>

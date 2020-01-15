@@ -54,7 +54,6 @@ class LoginForm extends React.Component {
           <h2 className="login-form-greeting">Welcome Back to</h2> 
           <h1 className="login-form-title">Mindscape</h1> 
           <br/>
-          {/* <small>Step Into Your Customized Dream</small> */}
           <div onClick={this.props.closeModal} className="close-x">×</div>
           <br/>
           <button className="demo-login-button" onClick={this.demologin} type="button">Demo Log In</button>
