@@ -10,10 +10,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_08_235209) do
+ActiveRecord::Schema.define(version: 2020_01_14_032406) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "reviews", force: :cascade do |t|
+    t.text "body"
+    t.integer "user_id", null: false
+    t.integer "scape_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["scape_id"], name: "index_reviews_on_scape_id", unique: true
+    t.index ["user_id"], name: "index_reviews_on_user_id", unique: true
+  end
+
+  create_table "scapes", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "category", null: false
+    t.float "lat", null: false
+    t.float "lng", null: false
+    t.integer "daily_price", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "creator_id", null: false
+    t.string "picture_url"
+    t.text "description", null: false
+    t.index ["creator_id"], name: "index_scapes_on_creator_id"
+    t.index ["name"], name: "index_scapes_on_name"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", null: false

@@ -1,0 +1,171 @@
+.scapescontainer {
+  width: 100%;
+  display: inline-table;
+  background-size: cover;
+  background-image: image-url("backgrounds/03.jpg");
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.scapes-page {
+  margin: auto;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.scapes-index {
+  color: white;
+  padding-top: 100px;
+  display: grid;
+}
+
+.filter-box {
+  border-radius: 3px;
+  height: 80px;
+  width: 100%;
+  padding: 10px;
+  background-color: #fdfdfd;
+  box-shadow: 0px 0px 5px darkgrey;
+}
+
+.scapes-grid {
+  display: grid;
+  grid-template-columns: 65% 35%;
+  box-sizing: border-box;
+  margin-top: 40px;
+}
+
+.scapes-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.scape-card-container {
+  width: 50%;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+.scape-card {
+  width: 100%;
+  background-color: white;
+  padding: 5px;
+  border-radius: 3px;
+  box-shadow: 0px 0px 5px darkgrey;
+}
+
+.scape-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 3px;
+  box-shadow: 0px 0px 5px darkgrey;
+  cursor: pointer;
+}
+
+.scape-card-title {
+  color: #444444;
+  font-size: 28px;
+  font-weight: 900;
+  padding: 13px 10px 10px 10px;
+  cursor: pointer;
+}
+
+.scape-card-deets {
+  color: #757575;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: baseline;
+}
+
+.scape-card-price {
+  color: #444444;
+  font-size: 22px;
+  font-weight: 700;
+  text-align: right;
+}
+
+.line-break {
+  border-bottom: 2px solid #eeeeee;
+  width: 100%;
+}
+
+.scapes-calendar {
+  height: 100%;
+  width: 160px;
+  background-image: image-url("calendar-search.png");
+  border-radius: 3px;
+  background-color: white;
+  box-shadow: 0px 0px 5px darkgrey;
+  background-repeat: no-repeat;
+  background-position-x: -5px;
+  background-position-y: center;
+  background-size: 50px;
+  padding-left: 60px;
+  font-weight: 400;
+  font-size: 18px;
+  color: #757575;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+.scapes-calendar:focus {
+  box-shadow: 0px 0px 5px black;
+}
+
+.scapes-category-button {
+  height: 100%;
+  width: 10%;
+  border-radius: 3px;
+  background-color: white;
+  box-shadow: 0px 0px 5px darkgrey;
+  background-repeat: no-repeat;
+  background-position-x: -5px;
+  background-position-y: center;
+  background-size: 50px;
+  margin-left: 10px;
+  font-weight: 400;
+  font-size: 18px;
+  color: #c0c0c0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.scapes-category-button:hover {
+  // box-shadow: 0px 0px 3px #f7398a;
+  color: #757575;
+  background-color: #222222;
+}
+
+// Mobile responsive
+
+@media only screen and (max-width: 1100px) {
+  .scape-card-container {
+    width: 100%;
+  }
+}
+
+// @media (min-width: 1000px) and (max-width: 1199px) {
+//   .scapes-page {
+//     // width: 900px;
+//     width: 1000px;
+//   }
+// }
+
+// @media (min-width: 760px) and (max-width: 999px) {
+//   .scapes-page {
+//     width: 750px;
+//     padding-left: 40px;
+//     padding-right: 40px;
+//   }
+// }
+
+// @media (min-width: 0) and (max-width: 759px) {
+//   .scapes-page {
+//     padding-left: 40px;
+//     padding-right: 40px;
+//   }
+// }

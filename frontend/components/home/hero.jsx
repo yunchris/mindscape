@@ -22,7 +22,7 @@ export default class Hero extends React.Component {
     return (
       <div className="hero-section">
         <div className="content-container">
-          <div className="welcome-container">
+          <div className="home-top-container">
             <div>
               <h1 className="welcome-greeting-title">Open the door to infinity</h1>
               <div className="welcome-copy">

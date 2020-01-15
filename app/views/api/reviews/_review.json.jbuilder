@@ -1,0 +1,1 @@
+json.extract! review, :id, :body, :scape_id, :user_id

@@ -7,7 +7,7 @@ const Navbar = () => {
   $(window).scroll(function () {
     if ($(this).scrollTop() > 10) {
       $('#header-scroll').slideDown(500);
-      $('#header-full').slideUp(500);
+      $('#header-full').slideUp(50);
     } else {
       $('#header-scroll').slideUp(500);
       $('#header-full').slideDown(500);
