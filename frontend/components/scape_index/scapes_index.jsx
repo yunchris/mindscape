@@ -6,13 +6,9 @@ class ScapesIndex extends React.Component {
 
   constructor(props) {
     super(props); 
-    // this.state = {
-    //   currentScapes: this.props.scapes 
-    // }
   }
 
   componentDidMount() {
-    // this.props.fetchScapes()
    this.props.updateCategory(this.props.token)
     
 
@@ -34,13 +30,6 @@ class ScapesIndex extends React.Component {
 
   categoryClick(genre) {
     this.props.updateCategory(genre)
-      // .then(() => {
-      //   this.setState({
-      //     currentScapes: this.props.scapes.filter(scape => {
-      //       return scape.category === filter || filter === "all"
-      //     })
-      //   });
-      // });
   };
 
   assignActive(el) {
@@ -62,7 +51,6 @@ class ScapesIndex extends React.Component {
                           id={`category-${idx}`} 
                           className={`scapes-category-button${this.props.category === genre ? ' active' : ''}`}
                           onClick={() => {
-                            // this.assignActive(`category-${idx}`)
                             this.categoryClick(genre) // assignment is to make clicking button change URL instead of changing state... (componentdidupdate?)
                           }}>
                     {idx === 0 ? "Sci-Fi" : idx === 6 ? "All..." : genre[0].toUpperCase() + genre.slice(1)}

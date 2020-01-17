@@ -1,11 +1,9 @@
 import { connect } from 'react-redux';
 import { fetchScapes } from '../../actions/scape_actions';
-import { updateFilter, updateCategory } from '../../actions/filter_actions'
+import { updateCategory } from '../../actions/filter_actions'
 import ScapesIndex from './scapes_index';
 
 const mapStateToProps = (state, ownProps) => {
-  // console.log(ownProps.match.params.genre)
-
   return {
     scapes: Object.values(state.entities.scapes),
     bounds: state.ui.filters.bounds, 

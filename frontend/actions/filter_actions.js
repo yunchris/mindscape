@@ -3,7 +3,6 @@ import { fetchScapes } from './scape_actions';
 export const UPDATE_FILTER = 'UPDATE_FILTER';
 export const UPDATE_CATEGORY = 'UPDATE_CATEGORY';
 export const UPDATE_BOUNDS = 'UPDATE_BOUNDS';
-// export const SEND_CATEGORY = 'SEND_CATEGORY'; 
 
 export const changeFilter = (filter, value) => {
   return {
@@ -35,12 +34,3 @@ export const updateCategory = (genre) => (dispatch, getState) => {
   dispatch(changeCategory(genre));
   return fetchScapes(getState().ui.filters)(dispatch);
 }
-
-
-// export const sendCategory = category => {
-//   return {
-//   type: SEND_CATEGORY, 
-//   category: category 
-// }}
-
-// export const sendCategory2 = category => dispatch(sendCategory(category))

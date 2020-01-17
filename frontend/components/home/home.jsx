@@ -2,7 +2,6 @@ import React from 'react';
 import Hero from './hero';
 import Category from './category';
 import About from './about';
-import Footer from '../footer/footer';
 
 export default class Home extends React.Component {
   componentDidMount() {

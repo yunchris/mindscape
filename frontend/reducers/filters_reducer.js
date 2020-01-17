@@ -13,11 +13,6 @@ const filtersReducer = (state = defaultFilters, action) => {
       bounds: action.value 
     };
     return Object.assign({}, state, newFilter);
-  // } else if (action.type === SEND_CATEGORY) {
-  //   const newRes = {
-  //     category: action.category 
-  //   }
-  //   return Object.assign({}, state, newRes); 
   } else if (action.type === UPDATE_CATEGORY) {
     return Object.assign({}, state, {category: action.genre});
   } else if (action.type === UPDATE_BOUNDS) {

@@ -1,5 +1,4 @@
 import { RECEIVE_SCAPES, RECEIVE_SCAPE, RECEIVE_REVIEW } from '../actions/scape_actions';
-import { UPDATE_CATEGORY } from '../actions/filter_actions';
 
 const scapesReducer = (state = {}, action) => {
   Object.freeze(state)

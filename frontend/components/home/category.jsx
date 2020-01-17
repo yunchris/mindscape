@@ -1,19 +1,10 @@
 import React from 'react';
-
 import { withRouter } from 'react-router-dom'; 
-import { sendCategory2 } from '../../actions/filter_actions'; 
 
 class Category extends React.Component {
   constructor(props) {
     super(props); 
-    this.categoryJump = this.categoryJump.bind(this); 
   }
-
-  // categoryJump(e) {
-  //   e.preventDefault(); 
-  //   sendCategory2('horror');
-  //   this.props.history.push('/scapes');
-  // }
 
   render () {
     return (
@@ -36,18 +27,18 @@ class Category extends React.Component {
 
             <div className="divider"></div>
 
-            <div className="card horror" onClick={(e) => this.categoryJump(e)}>
-              {/* <a href="/#/scapes/"> */}
+            <div className="card horror" >
+              <a href="/#/scapes/horror">
                 <h2>Horror</h2>
                 <p>LIVE THE FEAR</p>
                 <div className="pic"></div>
-              {/* </a> */}
+              </a>
             </div>
 
             <div className="divider"></div>
 
             <div className="card fantasy" >
-              <a href="/#/scapes">
+              <a href="/#/scapes/fantasy">
                 <h2>Fantasy</h2>
                 <p>IMAGINED REALITIES</p>
                 <div className="pic"></div>
@@ -60,7 +51,7 @@ class Category extends React.Component {
         <div className="content-container">
           <div className="container">
             <div className="card past">
-              <a href="/#/scapes">
+              <a href="/#/scapes/past">
                 <h2>Past</h2>
                 <p>EXPLORE HISTORY</p>
                 <div className="pic"></div>
@@ -70,7 +61,7 @@ class Category extends React.Component {
             <div className="divider"></div>
 
             <div className="card present">
-              <a href="/#/scapes">
+              <a href="/#/scapes/present">
                 <h2>Present</h2>
                 <p>TRAVEL & ADVENTURE</p>
                 <div className="pic"></div>
@@ -80,7 +71,7 @@ class Category extends React.Component {
             <div className="divider"></div>
 
             <div className="card romance">
-              <a href="/#/scapes">
+              <a href="/#/scapes/romance">
                 <h2>Romance</h2>
                 <p>JOURNEY INTO MADNESS</p>
                 <div className="pic"></div>

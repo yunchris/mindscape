@@ -27,9 +27,5 @@ class Api::ScapesController < ApplicationController
       :daily_price,
       :creator_id)
   end
-
-  # def bounds
-  #   params[:bounds]
-  # end
 end
 

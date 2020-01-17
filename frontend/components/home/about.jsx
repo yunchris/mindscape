@@ -17,7 +17,7 @@ export default class About extends React.Component {
           <br/><br/>
             Step into our custom designed realities and live out your dreams from the comfort and safety of one of our
             luxury five star accommodations.
-          <a href="/#/scapes"><div className="explorebutton">Explore</div></a>
+          <a href="/#/scapes/all"><div className="explorebutton">Explore</div></a>
         </div>
       </div>
     );

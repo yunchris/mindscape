@@ -14,7 +14,9 @@ class LoginForm extends React.Component {
       password: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.demologin = this.demologin.bind(this);
+    // this.demologin = this.demologin.bind(this);
+    this.demo = this.demo.bind(this);
+    this.handleDemo = this.handleDemo.bind(this);
   }
 
   update(field) {
@@ -28,11 +30,54 @@ class LoginForm extends React.Component {
     this.props.processForm(this.state).then(this.props.closeModal);
   }
 
-  demologin(e) {
-    e.preventDefault();
-    const guest = ({ email: 'guest@guest.com', password: 'guestguest' });
-    this.props.processForm(guest).then(this.props.closeModal);
+  // Experiment
+  demo(user) {
+    const intervalSpeed = 100;
+    const { email, password } = user;
+    const demoEmailTime = email.length * intervalSpeed;
+    const demoPasswordTime = password.length * intervalSpeed;
+    const buffer = intervalSpeed * 2;
+    const totalDemoTime = demoEmailTime + demoPasswordTime + buffer;
+    this.demoEmail(email, intervalSpeed);
+    setTimeout(() => this.demoPassword(password, intervalSpeed), demoEmailTime);
+    setTimeout(() => this.props.processForm(this.state).then(this.props.closeModal), totalDemoTime + 200);
   }
+
+  demoEmail(email, intervalSpeed) {
+    let i = 0;
+    setInterval(() => {
+      if (i <= email.length) {
+        this.setState({ email: email.slice(0, i) });
+        i++;
+      } else {
+        clearInterval();
+      }
+    }, intervalSpeed);
+  }
+
+  demoPassword(password, intervalSpeed) {
+    let j = 0;
+    setInterval(() => {
+      if (j <= password.length) {
+        this.setState({ password: password.slice(0, j) });
+        j++;
+      } else {
+        clearInterval();
+      }
+    }, intervalSpeed);
+  }
+
+  handleDemo(e) {
+    e.preventDefault();
+    const user = Object.assign({}, { email: 'guest@guest.com', password: 'guestguest' });
+    this.demo(user);
+  }
+
+  // demologin(e) {
+  //   e.preventDefault();
+  //   const guest = ({ email: 'guest@guest.com', password: 'guestguest' });
+  //   this.props.processForm(guest).then(this.props.closeModal);
+  // }
 
   renderErrors() {
     return (
@@ -56,7 +101,7 @@ class LoginForm extends React.Component {
           <br/>
           <div onClick={this.props.closeModal} className="close-x">×</div>
           <br/>
-          <button className="demo-login-button" onClick={this.demologin} type="button">Demo Log In</button>
+          <button className="demo-login-button" onClick={this.handleDemo} type="button">Demo Log In</button>
           <br/>
           <p className="subtitle fancy"><span>OR</span></p>
           <div className="login-form">

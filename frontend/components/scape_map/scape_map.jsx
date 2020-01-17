@@ -2,14 +2,10 @@ import React from 'react';
 
 import MarkerManager from '../../util/marker_manager';
 import { withRouter} from 'react-router-dom';
-// const getCoordsObj = latLng => ({
-//   lat: latLng.lat(),
-//   lng: latLng.lng()
-// });
 
 const mapOptions = {
   center: { lat: 37.622590, lng: -122.210229 },
-  zoom: 9,
+  zoom: 10,
   disableDefaultUI: true,
   zoomControl: true
 };
@@ -51,27 +47,16 @@ class ScapeMap extends React.Component {
       };
       this.props.updateBounds(bounds);
     });
-
-    // google.maps.event.addListener(this.map, 'click', (event) => {
-    //   const coords = getCoordsObj(event.latLng);
-    //   this.handleClick(coords);
-    // });
   }
 
   handleMarkerClick(scape) {
-    this.props.history.push(`scapes/${scape.id}`);
+    this.props.history.push(`${scape.id}`);
   }
-
-  // handleClick(coords) {
-  //   this.props.history.push({
-  //     pathname: 'scapes/new',
-  //   });
-  // }
 
   render() {
     return (
       <div className="map-container" ref="map">
-        <div className="gmap" id="map">MAP TEST</div>
+        <div className="gmap" id="map"></div>
       </div>
     )
   }

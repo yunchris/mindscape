@@ -7,7 +7,6 @@ class ScapeShow extends React.Component {
 
   render() {
     const { scape } = this.props;
-    // debugger
     if (!this.props.scape) return null;
 
     return (
@@ -16,6 +15,7 @@ class ScapeShow extends React.Component {
         <div className="scape-carousel">
           <img src={scape.picture_url} />
         </div>
+        {/* <div className="booking"></div> */}
         <div className="scape-details">
           <div className="scape-info">
             <div>HELLOOOO</div>
@@ -25,7 +25,6 @@ class ScapeShow extends React.Component {
             <div>{scape.daily_price}</div>
             <div>{scape.creator.first_name}</div>
           </div>
-          <div className="booking"></div>
         </div>
       </div>
     )
