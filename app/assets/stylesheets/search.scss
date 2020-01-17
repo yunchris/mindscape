@@ -48,7 +48,7 @@
   margin: 17px 10px 17px 17px;  
 }
 
-.search-input:focus, .search-calendar:focus, .search-category:focus {
+.search-input:focus, .search-calendar:focus, .search-category:focus, .custom-select-wrapper:focus {
   box-shadow: 0px 0px 3px #f7398a;
 }
 
@@ -62,10 +62,6 @@
   width: 35%;
   padding-left: 43px;
   margin: 17px 0px 17px 0px;  
-}
-
-.options {
-  height: 200px;
 }
 
 .search-submit {
@@ -89,10 +85,122 @@
   box-shadow: 0px 0px 3px #f7398a;
 }
 
+// Category Dropdown
 
-option {
-  background-color: red;
+
+.custom-select-wrapper {
+  width: 35%;
+  margin: 17px 0px 17px 0px;
+  border-radius: 1px;
+  border-style: none;
+  background-color: white;
+  box-shadow: 0px 0px 1px #555555;
+  box-sizing: border-box;
 }
+
+.custom-select-wrapper span {
+  font-weight: 400;
+  color: #757575;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.custom-select {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.custom-select__trigger {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 22px;
+  height: 100%;
+  cursor: pointer;
+}
+
+.custom-options {
+  position: absolute;
+  display: block;
+  top: 100%;
+  left: 0;
+  right: 0;
+  border-top: 0;
+  background: #fff;
+  transition: all 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 7;
+}
+.custom-select.open .custom-options {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+
+.custom-option {
+  position: relative;
+  display: block;
+  padding: 0 22px 0 22px;
+  font-size: 22px;
+  font-weight: 300;
+  color: #3b3b3b;
+  line-height: 50px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.custom-option:hover {
+  cursor: pointer;
+  background-color: #dbdbdb;
+}
+
+ .custom-option.selected {
+  color: #ffffff;
+  background-color: #f7398a;
+}
+
+// Dropdown arrow
+
+.arrow {
+  position: relative;
+  height: 15px;
+  width: 15px;
+}
+
+.arrow::before, .arrow::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  width: 0.15rem;
+  height: 100%;
+  transition: all 0.5s;
+}
+
+.arrow::before {
+  left: -5px;
+  transform: rotate(45deg);
+  background-color: #757575;
+}
+
+.arrow::after {
+  left: 5px;
+  transform: rotate(-45deg);
+  background-color: #757575;
+}
+ .open .arrow::before {
+     left: -5px;
+     transform: rotate(-45deg);
+}
+ .open .arrow::after {
+     left: 5px;
+     transform: rotate(45deg);
+}
+
 
 // Mobile responsive
 
@@ -132,14 +240,18 @@ option {
     margin  : 0px 0px 0px 10px;
   } 
 
+  .custom-select-wrapper {
+    height: 100%;
+    width: 35%;
+    margin: 0px 0px 0px 10px;
+  }
+
   .search-submit {
     width: 30%;
     height: 100%;
     margin: 0px 17px 0px 10px;
   }
 }
-
-
 
 // daterangepicker
 

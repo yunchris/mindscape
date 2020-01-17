@@ -1,4 +1,4 @@
-import { UPDATE_FILTER, SEND_CATEGORY, UPDATE_CATEGORY, UPDATE_BOUNDS} from '../actions/filter_actions';
+import { UPDATE_FILTER, UPDATE_CATEGORY, UPDATE_BOUNDS} from '../actions/filter_actions';
 
 const defaultFilters = Object.freeze({
   bounds: {}, 
