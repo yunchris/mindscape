@@ -12,6 +12,15 @@ navbar {
   z-index: 9;
 }
 
+.nav-background {
+  height: 80px;
+  background-size: cover;
+  background-image: image-url("backgrounds/home.jpg");
+  background-attachment: fixed;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
 .header {
   width: 100%;
   position: fixed;

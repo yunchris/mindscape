@@ -2,15 +2,19 @@ import { connect } from 'react-redux';
 
 import Search from './search';
 import { asArray } from '../../reducers/selectors';
-import { updateFilter } from '../../actions/filter_actions';
+import { updateBounds } from '../../actions/filter_actions';
+import { fetchScapes } from '../../actions/scape_actions'
 
-const mapStateToProps = state => ({
+const mapStateToProps = state => {
+  return {
   scapes: asArray(state.entities),
   category: state.ui.filters.category
-});
+  }
+};
 
 const mapDispatchToProps = dispatch => ({
-  updateFilter: (filter, value) => dispatch(updateFilter(filter, value))
+  fetchScapes: () => dispatch(fetchScapes()),
+  updateBounds: (bounds) => dispatch(updateBounds(bounds))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Search);

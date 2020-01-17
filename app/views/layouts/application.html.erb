@@ -7,10 +7,13 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <script type="text/javascript">
-      window.logo = "<%= image_url('logo.png') %>"
-    </script>
     <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{ENV['MAPS_API_KEY']}" %>
+    <script>
+      window.logo = "<%= image_url('logo.png') %>"
+      window.icon = "<%= image_url('icon.png') %>"
+      window.how = "<%= image_url('gif/mindgif.gif') %>"
+    </script>
+    <link rel="icon" type="image/png" href="<%= image_url('icon.png') %>">
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">   
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>

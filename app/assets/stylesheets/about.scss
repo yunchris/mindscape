@@ -1,64 +1,60 @@
-.filler1 {
-  height: 300px;
-  background-color: bisque;
-}
-
-.filler2 {
-  height: 300px;
-  background-color: beige;
-}
-
-.about1 {
-  background-color: black;
-  height: 500px;
+.about-section {
   width: 100%;
+  padding: 50px 40px 180px 40px;
   background-size: cover;
-  background-image: image-url("backgrounds/3.jpg");
+  background-image: image-url("backgrounds/home.jpg");
   background-attachment: fixed;
   background-position: top;
   background-repeat: no-repeat;
 }
 
-.about2 {
-  background-color: black;
-  height: 500px;
-  width: 100%;
-  background-size: cover;
-  background-image: image-url("backgrounds/polyterrain.jpg");
-  background-attachment: fixed;
-  background-position: top;
-  background-repeat: no-repeat;
+.what {
+  text-align: center;
+  position: relative;
+}
+ 
+.what > img {
+  width: 300px;
 }
 
-.about3 {
-  background-color: black;
-  height: 500px;
+.howItWorks-title {
+  color: white;
+  font-size: 50px;
+  font-weight: 800;
+  position: absolute;
+  z-index: 2;
+  font-family: Arial, Helvetica, sans-serif;
+  top: 40%;
+  text-shadow: 2px 2px 2px black;
+  margin: auto;
   width: 100%;
-  background-size: cover;
-  background-image: image-url("backgrounds/web.png");
-  background-attachment: fixed;
-  background-position: top;
-  background-repeat: no-repeat;
 }
 
-.about4 {
-  background-color: black;
-  height: 500px;
-  width: 100%;
-  background-size: cover;
-  background-image: image-url("backgrounds/11.jpg");
-  background-attachment: fixed;
-  background-position: top;
-  background-repeat: no-repeat;
+.howItWorks-copy {
+  color: white;
+  font-size: 22px;
+  width: 710px;
+  margin: auto;
+  text-align: center;
 }
 
-.about5 {
+.explorebutton {
+  width: 100px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #00000067;
+  color: white;
+  font-size: 18px;
+  border: 1px solid white;
+  margin: 35px auto;
+  padding: 10px;
+  border-radius: 5px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.explorebutton:hover {
   background-color: black;
-  height: 500px;
-  width: 100%;
-  background-size: cover;
-  background-image: image-url("backgrounds/01.jpg");
-  background-attachment: fixed;
-  background-position: top;
-  background-repeat: no-repeat;
+  color: white;
+  border: 1px solid white;
+  transform: scale(1.05);
 }

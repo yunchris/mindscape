@@ -16,10 +16,10 @@ const Navbar = () => {
 
   return (
     <div className="nav-container">
-        <div id="header-full" className="header">
-          <div><Link to="/"><img src={window.logo} className="logo" /></Link></div>
-          <div className="nav-links"><Greeting /></div>
-        </div>
+      <div id="header-full" className="header">
+        <div><Link to="/"><img src={window.logo} className="logo" /></Link></div>
+        <div className="nav-links"><Greeting /></div>
+      </div>
       <div id="header-scroll" className="header">
           <Link to="/"><img src={window.logo} className="logo-scroll" /></Link>
           <div className="nav-links-scroll"><Greeting /></div>

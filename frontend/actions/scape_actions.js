@@ -9,11 +9,9 @@ export const receiveScapes = scapes => ({
   scapes
 });
 
-export const receiveScape = ({ scape, reviews, authors}) => ({
+export const receiveScape = (scape) => ({
   type: RECEIVE_SCAPE,
-  scape,
-  reviews,
-  authors
+  scape
 });
 
 // export const receiveReview = ({ review, }) = ({
@@ -29,8 +27,8 @@ export const receiveScape = ({ scape, reviews, authors}) => ({
 //   ))
 // );
 
-export const fetchScapes = () => dispatch => (
-  APIUtil.fetchScapes().then(scapes => (
+export const fetchScapes = (filter) => dispatch => (
+  APIUtil.fetchScapes(filter).then(scapes => (
     dispatch(receiveScapes(scapes))
   ))
 );

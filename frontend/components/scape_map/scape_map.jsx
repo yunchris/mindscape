@@ -1,24 +1,80 @@
 import React from 'react';
 
+import MarkerManager from '../../util/marker_manager';
+import { withRouter} from 'react-router-dom';
+// const getCoordsObj = latLng => ({
+//   lat: latLng.lat(),
+//   lng: latLng.lng()
+// });
+
 const mapOptions = {
-  center: { lat: 37.7758, lng: -122.435 },
-  zoom: 13
+  center: { lat: 37.622590, lng: -122.210229 },
+  zoom: 9,
+  disableDefaultUI: true,
+  zoomControl: true
 };
 
 class ScapeMap extends React.Component {
-  componentDidMount() {
-    // { window.googleAPIKey }
-    this.map = new google.maps.Map(this.mapNode, mapOptions);
+  constructor(props) {
+    super(props);
   }
 
+  componentDidMount() {
+    const map = document.getElementById("map");
+    this.map = new google.maps.Map(map, mapOptions);
+    this.MarkerManager = new MarkerManager(this.map, this.handleMarkerClick.bind(this));
+    if (this.props.singleScape) {
+      this.props.fetchScape(this.props.scapeId);
+    } else {
+      this.registerListeners();
+      this.MarkerManager.updateMarkers(this.props.scapes);
+    }
+  }
+
+  componentDidUpdate() {
+    if (this.props.singleScape) {
+      const targetScapeKey = Object.keys(this.props.scapes)[0];
+      const targetScape = this.props.scapes[targetScapeKey];
+      this.MarkerManager.updateMarkers([targetScape]);
+    } 
+    else {
+      this.MarkerManager.updateMarkers(this.props.scapes);
+    }
+  }
+
+  registerListeners() {
+    google.maps.event.addListener(this.map, 'idle', () => {
+      const { north, south, east, west } = this.map.getBounds().toJSON();
+      const bounds = {
+        northEast: { lat: north, lng: east },
+        southWest: { lat: south, lng: west }
+      };
+      this.props.updateBounds(bounds);
+    });
+
+    // google.maps.event.addListener(this.map, 'click', (event) => {
+    //   const coords = getCoordsObj(event.latLng);
+    //   this.handleClick(coords);
+    // });
+  }
+
+  handleMarkerClick(scape) {
+    this.props.history.push(`scapes/${scape.id}`);
+  }
+
+  // handleClick(coords) {
+  //   this.props.history.push({
+  //     pathname: 'scapes/new',
+  //   });
+  // }
 
   render() {
     return (
       <div className="map-container" ref="map">
-        <div className="gmap" ref={map => this.mapNode = map}></div>
+        <div className="gmap" id="map">MAP TEST</div>
       </div>
     )
   }
 };
 
-export default ScapeMap;
+export default withRouter(ScapeMap);

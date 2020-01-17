@@ -5,7 +5,7 @@ import ScapeShow from './scapes_show';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-  scape: state.entities.scapes[ownProps.match.params.scapeId]
+  scape: state.entities.scapes[ownProps.scapeId]
 }};
 
 const mapDispatchToProps = dispatch => {

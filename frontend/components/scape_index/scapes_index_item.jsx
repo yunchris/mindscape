@@ -13,16 +13,12 @@ class ScapeIndexItem extends React.Component {
   }
 
   render () {
-    const { name, category, description, daily_price, creator , picture_url } = this.props.scape;
+    const { name, category, daily_price , picture_url } = this.props.scape;
     return (
       <div className="scape-card-container">
         <div className="scape-card" onClick={this.handleClick}>
-          <div>
-            <img src={picture_url}/>
-          </div>
-          <div className="scape-card-title">
-            {name}
-          </div>
+          <div><img src={picture_url}/></div>
+          <div className="scape-card-title">{name}</div>
           <div className="line-break"></div>
           <div className="scape-card-deets">
             <div>{category}</div>

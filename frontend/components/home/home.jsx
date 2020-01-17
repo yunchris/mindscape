@@ -1,6 +1,8 @@
 import React from 'react';
 import Hero from './hero';
 import Category from './category';
+import About from './about';
+import Footer from '../footer/footer';
 
 export default class Home extends React.Component {
   componentDidMount() {
@@ -12,8 +14,7 @@ export default class Home extends React.Component {
       <div className="home">
         <Hero />
         <Category />
-        <div className="filler2"></div>
-        <div className="about2"></div>
+        <About />
       </div>
     );
   }

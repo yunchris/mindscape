@@ -1,6 +1,20 @@
 import React from 'react';
 
-export default class Category extends React.Component {
+import { withRouter } from 'react-router-dom'; 
+import { sendCategory2 } from '../../actions/filter_actions'; 
+
+class Category extends React.Component {
+  constructor(props) {
+    super(props); 
+    this.categoryJump = this.categoryJump.bind(this); 
+  }
+
+  // categoryJump(e) {
+  //   e.preventDefault(); 
+  //   sendCategory2('horror');
+  //   this.props.history.push('/scapes');
+  // }
+
   render () {
     return (
       <div className="category-section">
@@ -13,7 +27,7 @@ export default class Category extends React.Component {
         <div className="content-container">
           <div className="container">
             <div className="card scifi">
-              <a href="/#/scapes">
+              <a href="/#/scapes/scifi">
                 <h2>Sci-Fi</h2>
                 <p>WORLDS OF WHAT IF</p>
                 <div className="pic"></div>
@@ -22,17 +36,17 @@ export default class Category extends React.Component {
 
             <div className="divider"></div>
 
-            <div className="card horror">
-              <a href="/#/scapes">
+            <div className="card horror" onClick={(e) => this.categoryJump(e)}>
+              {/* <a href="/#/scapes/"> */}
                 <h2>Horror</h2>
                 <p>LIVE THE FEAR</p>
                 <div className="pic"></div>
-              </a>
+              {/* </a> */}
             </div>
 
             <div className="divider"></div>
 
-            <div className="card fantasy">
+            <div className="card fantasy" >
               <a href="/#/scapes">
                 <h2>Fantasy</h2>
                 <p>IMAGINED REALITIES</p>
@@ -75,8 +89,9 @@ export default class Category extends React.Component {
           </div>  
         </div>
 
-
       </div>
     );
   }
 };
+
+export default withRouter(Category); 

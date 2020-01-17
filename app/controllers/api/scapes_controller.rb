@@ -1,6 +1,8 @@
 class Api::ScapesController < ApplicationController
   def index
-    @scapes = Scape.includes(:creator).all
+    scapes = params[:bounds] ? Scape.in_bounds(params[:bounds]) : Scape.all
+    scapes = params[:category] && params[:category] != 'all' ? scapes.where(category: params[:category]) : scapes
+    @scapes = scapes.includes(:creator)
     render :index
   end
   
@@ -25,5 +27,9 @@ class Api::ScapesController < ApplicationController
       :daily_price,
       :creator_id)
   end
+
+  # def bounds
+  #   params[:bounds]
+  # end
 end
 
