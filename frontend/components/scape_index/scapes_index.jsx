@@ -1,12 +1,9 @@
 import React from 'react';
 import ScapeIndexItem from './scapes_index_item'; 
 import SearchContainer from '../search/search_container';
+import { withRouter } from 'react-router-dom';
 
 class ScapesIndex extends React.Component {
-
-  constructor(props) {
-    super(props); 
-  }
 
   componentDidMount() {
    this.props.updateCategory(this.props.token)
@@ -28,8 +25,12 @@ class ScapesIndex extends React.Component {
     parent.scrollTo(0, 0);
   };
 
+  componentDidUpdate() {
+    window.history.replaceState({}, null, `#/scapes/${this.props.category}`);
+  }
+  
   categoryClick(genre) {
-    this.props.updateCategory(genre)
+    this.props.updateCategory(genre);
   };
 
   assignActive(el) {
@@ -58,8 +59,8 @@ class ScapesIndex extends React.Component {
               )}
 
             </div>
-            <div className="scapes-grid">
-              <ul className="scapes-flex">
+            <div className="scapes-section">
+              <ul className="scapes-index-cards">
                 {
                   this.props.scapes && this.props.scapes.map(scape => (
                     <ScapeIndexItem
@@ -80,4 +81,4 @@ class ScapesIndex extends React.Component {
   }
 }
 
-export default ScapesIndex;
+export default withRouter (ScapesIndex);

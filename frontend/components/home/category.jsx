@@ -15,7 +15,7 @@ class Category extends React.Component {
           </div>
         </div>
 
-        <div className="content-container">
+        <div className="category-container">
           <div className="container">
             <div className="card scifi">
               <a href="/#/scapes/scifi">
@@ -24,19 +24,6 @@ class Category extends React.Component {
                 <div className="pic"></div>
               </a>
             </div>
-
-            <div className="divider"></div>
-
-            <div className="card horror" >
-              <a href="/#/scapes/horror">
-                <h2>Horror</h2>
-                <p>LIVE THE FEAR</p>
-                <div className="pic"></div>
-              </a>
-            </div>
-
-            <div className="divider"></div>
-
             <div className="card fantasy" >
               <a href="/#/scapes/fantasy">
                 <h2>Fantasy</h2>
@@ -44,32 +31,13 @@ class Category extends React.Component {
                 <div className="pic"></div>
               </a>
             </div>
-
-          </div>  
-        </div>
-
-        <div className="content-container">
-          <div className="container">
-            <div className="card past">
-              <a href="/#/scapes/past">
-                <h2>Past</h2>
-                <p>EXPLORE HISTORY</p>
+            <div className="card horror" >
+              <a href="/#/scapes/horror">
+                <h2>Horror</h2>
+                <p>LIVE THE FEAR</p>
                 <div className="pic"></div>
               </a>
             </div>
-
-            <div className="divider"></div>
-
-            <div className="card present">
-              <a href="/#/scapes/present">
-                <h2>Present</h2>
-                <p>TRAVEL & ADVENTURE</p>
-                <div className="pic"></div>
-              </a>
-            </div>
-
-            <div className="divider"></div>
-
             <div className="card romance">
               <a href="/#/scapes/romance">
                 <h2>Romance</h2>
@@ -77,7 +45,21 @@ class Category extends React.Component {
                 <div className="pic"></div>
               </a>
             </div>
-          </div>  
+            <div className="card past">
+              <a href="/#/scapes/past">
+                <h2>Past</h2>
+                <p>EXPLORE HISTORY</p>
+                <div className="pic"></div>
+              </a>
+            </div>
+            <div className="card present">
+              <a href="/#/scapes/present">
+                <h2>Present</h2>
+                <p>TRAVEL & ADVENTURE</p>
+                <div className="pic"></div>
+              </a>
+            </div>
+          </div>
         </div>
 
       </div>

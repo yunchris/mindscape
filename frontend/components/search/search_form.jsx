@@ -2,37 +2,59 @@ import React from 'react';
 
 
 class Search extends React.Component {
-  componentDidMount() {
-    console.log('mounted')
-    const selector = document.querySelector(".custom-select-wrapper");
-    selector.addEventListener("click", function() {
-      this.querySelector(".custom-select").classList.toggle("open");
-    });
-
-    for (const option of document.querySelectorAll(".custom-option")) {
-      console.log("something");
-      option.addEventListener("click", function() {
-        console.log("clicked");
-        if (!this.classList.contains("selected")) {
-          this.parentNode
-            .querySelector(".custom-option.selected")
-            .classList.remove("selected");
-          this.classList.add("selected");
-          this.closest(".custom-select").querySelector(
-            ".custom-select__trigger span"
-          ).textContent = this.textContent;
-        }
-      });
-    }
-    
-    window.addEventListener("click", function(e) {
-      const select = document.querySelector(".custom-select");
-      if (!select.contains(e.target)) {
-        select.classList.remove("open");
-      }
-    });
+  constructor(props) {
+    super(props);
+    this.handleClick = this.handleClick.bind(this);
+    this.selectClick = this.selectClick.bind(this);
+    // this.closeClick = this.closeClick.bind(this);
   }
 
+  componentDidMount() {
+    // const selector = document.querySelector(".custom-select-wrapper");
+    // selector.addEventListener("click", function() {
+    //   this.querySelector(".custom-select").classList.toggle("open");
+    // });
+
+    // for (const option of document.querySelectorAll(".custom-option")) {
+      // option.addEventListener("click", function() {
+      //   if (!this.classList.contains("selected")) {
+      //     this.parentNode
+      //       .querySelector(".custom-option.selected")
+      //       .classList.remove("selected");
+      //     this.classList.add("selected");
+      //     this.closest(".custom-select").querySelector(
+      //       ".custom-select__trigger span"
+      //     ).textContent = this.textContent;
+      //   }
+      // });
+    // }
+    
+    // window.addEventListener("click", function(e) {
+    //   const select = document.querySelector(".custom-select");
+    //   debugger
+    //   if (!select.contains(e.target)) {
+    //     select.classList.remove("open");
+    //   }
+    // });
+
+  }
+
+  handleClick() {
+    const select = document.querySelector(".custom-select");
+    select.classList.toggle("open");
+  }
+
+  selectClick(e) {
+    if (!e.target.classList.contains("selected")) {
+      e.target.parentNode
+        .querySelector(".custom-option.selected")
+        .classList.remove("selected");
+      e.target.classList.add("selected");
+      e.target.closest(".custom-select").querySelector(
+        ".custom-select__trigger span"
+      ).textContent = e.target.textContent;
+    }
+  }
 
   render() {
     return (
@@ -53,47 +75,38 @@ class Search extends React.Component {
               placeholder="Dates..."
             />
 
-            <div className="custom-select-wrapper">
-              <div className="custom-select">
+            <div className="custom-select-wrapper" onClick={this.handleClick}>
+              <div className="custom-select" >
                 <div className="custom-select__trigger">
                   <span>All</span>
                   <div className="arrow"></div>
                 </div>
                 <div className="custom-options">
-                  <span className="custom-option selected" data-value="all">
+                  <span className="custom-option selected" data-value="all" onClick={this.selectClick}>
                     All
                   </span>
-                  <span className="custom-option" data-value="scifi">
+                  <span className="custom-option" data-value="scifi" onClick={this.selectClick}>
                     Sci-Fi
                   </span>
-                  <span className="custom-option" data-value="horror">
-                    Horror
-                  </span>
-                  <span className="custom-option" data-value="fantasy">
+                  <span className="custom-option" data-value="fantasy" onClick={this.selectClick}>
                     Fantasy
                   </span>
-                  <span className="custom-option" data-value="past">
+                  <span className="custom-option" data-value="horror" onClick={this.selectClick}>
+                    Horror
+                  </span>
+                  <span className="custom-option" data-value="romance" onClick={this.selectClick}>
+                    Romance
+                  </span>
+                  <span className="custom-option" data-value="past" onClick={this.selectClick}>
                     Past
                   </span>
-                  <span className="custom-option" data-value="present">
+                  <span className="custom-option" data-value="present" onClick={this.selectClick}>
                     Present
-                  </span>
-                  <span className="custom-option" data-value="romance">
-                    Romance
                   </span>
                 </div>
               </div>
             </div>
 
-            {/* <select className="search-category">
-            <option value="all">All...</option>
-            <option value="scifi">Sci-Fi</option>
-            <option value="horror">Horror</option>
-            <option value="fantasy">Fantasy</option>
-            <option value="past">Past</option>
-            <option value="present">Present</option>
-            <option value="romance">Romance</option>
-          </select> */}
             <input type="submit" className="search-submit" value="Search" />
           </div>
         </form>
@@ -102,35 +115,5 @@ class Search extends React.Component {
   }
 
 }
-// const Search = () => {
-
-
-
-
-  // window.onload = function() {
-  //   const selector = document.querySelector('.custom-select-wrapper');
-  //   selector.addEventListener('click', function () {
-  //     this.querySelector('.custom-select').classList.toggle('open');
-  //   })
-
-  //   for (const option of document.querySelectorAll(".custom-option")) {
-  //     console.log('something')
-  //     option.addEventListener('click', function () {
-  //       console.log('clicked')
-  //       if (!this.classList.contains('selected')) {
-  //         this.parentNode.querySelector('.custom-option.selected').classList.remove('selected');
-  //         this.classList.add('selected');
-  //         this.closest('.custom-select').querySelector('.custom-select__trigger span').textContent = this.textContent;
-  //       }
-  //     })
-  //   }
-  // }
-
-
-  
-
-  
-
-// };
 
 export default Search;

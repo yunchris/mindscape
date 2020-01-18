@@ -4,7 +4,7 @@ import MarkerManager from '../../util/marker_manager';
 import { withRouter} from 'react-router-dom';
 
 const mapOptions = {
-  center: { lat: 37.622590, lng: -122.210229 },
+  center: { lat: 37.590106, lng: -122.229460},
   zoom: 10,
   disableDefaultUI: true,
   zoomControl: true

@@ -2,11 +2,6 @@
   height: 500px;
   width: 100%;
   display: inline-table;
-  background-size: cover;
-  background-image: image-url("backgrounds/home.jpg");
-  background-attachment: fixed;
-  background-position: top;
-  background-repeat: no-repeat;
 }
 
 .home-top-container {
@@ -61,7 +56,6 @@
 
 @media (min-width: 1000px) and (max-width: 1199px) {
   .content-container {
-    // width: 900px;
     width: 1000px;
   }
 }
@@ -69,14 +63,14 @@
 @media (min-width: 760px) and (max-width: 999px) {
   .content-container {
     width: 750px;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
 @media (min-width: 0) and (max-width: 759px) {
   .content-container {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }

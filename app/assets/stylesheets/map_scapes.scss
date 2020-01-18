@@ -1,6 +1,6 @@
 .map {
   max-height: 85vh;
-  width: 100%;
+  width: 33%;
   position: sticky;
   top: 80px;
   background-color: white;  
@@ -19,6 +19,3 @@ a[href^="https://maps.google.com/maps"]{display:none !important}
 .gmnoprint a, .gmnoprint span, .gm-style-cc {
     display:none;
 }
-// .gmnoprint div {
-//     background:none !important;
-// }

@@ -12,9 +12,9 @@ export default class About extends React.Component {
         </div>
         
         <div className="howItWorks-copy">
-            Welcome to the future. Mindscape uses magnetic resonance mapping to plug your consciousness into a networked
+            Welcome to the future. <br/><br/>
+            Mindscape uses magnetic resonance mapping to plug your consciousness into a networked
             virtual world. 
-          <br/><br/>
             Step into our custom designed realities and live out your dreams from the comfort and safety of one of our
             luxury five star accommodations.
           <a href="/#/scapes/all"><div className="explorebutton">Explore</div></a>

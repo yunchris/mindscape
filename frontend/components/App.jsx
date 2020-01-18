@@ -10,7 +10,7 @@ import ScapeShowContainer from './scape_show/scapes_show_container';
 import Footer from './footer/footer';
 
 const App = () => (
-  <div>
+  <div className="app">
     <Modal />
     <Navbar />
     <Route exact path="/" component={Home} />

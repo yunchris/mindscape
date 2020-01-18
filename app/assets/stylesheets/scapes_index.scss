@@ -5,13 +5,13 @@
 
 .scapes-page {
   margin: auto;
+  background-color: white;
   padding: 0px 70px 70px 70px;
 }
 
 .scapes-index {
   color: white;
   padding-top: 30px;
-  display: grid;
 }
 
 .filter-box {
@@ -27,16 +27,16 @@
   overflow-y: hidden;
 }
 
-.scapes-grid {
-  display: grid;
-  grid-template-columns: 63% 37%;
+.scapes-section {
+  display: flex;
   box-sizing: border-box;
   margin-top: 30px;
 }
 
-.scapes-flex {
+.scapes-index-cards {
   display: flex;
   flex-wrap: wrap;
+  width: 67%;
 }
 
 .scape-card-container {
@@ -156,6 +156,16 @@
 // Mobile responsive
 
 @media only screen and (max-width: 1100px) {
+  .scapes-page {
+    padding: 0px 40px 70px 40px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .scapes-page {
+    padding: 0px 20px 70px 20px;
+  }
+
   .scape-card-container {
     width: 100%;
   }
@@ -163,4 +173,5 @@
   .scapes-category-button {
     width: 20%;
   }
+
 }

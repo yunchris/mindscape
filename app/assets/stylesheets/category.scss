@@ -1,11 +1,6 @@
 .category-section {
   height: 700px;
   width: 100%;
-  background-size: cover;
-  background-image: image-url("backgrounds/home.jpg");
-  background-attachment: fixed;
-  background-position: top;
-  background-repeat: no-repeat;
 }
 
 .category-message {
@@ -16,13 +11,12 @@
 
 .category-container {
   margin: auto;
-  padding: 0px 60px 0px 60px;
+  padding: 0px 50px 0px 60px;
   display: flex;
 }
 
 .category-container > div {
   width: 100%;
-  margin: 20px;
 }
 
 .category-container img{
@@ -41,18 +35,16 @@ body {
 .container {
   display: flex;
   justify-content: space-between;
-
-  .divider {
-    width: 40px;
-  }
+  flex-wrap: wrap;
 
   .card {
     position: relative;
     border: 2px solid rgba(255, 255, 255, .9);;
-    width: 100%;
+    width: 32%;
     height: 250px;
     overflow: hidden;
-    margin-bottom: 10px;
+    margin-bottom: 1%;
+    margin-right: 1%;
 
     ul {
       z-index: 5;
@@ -156,12 +148,6 @@ body {
   
 }
 
-@media (max-width: 999px) {
-  .container {
-    display: block;
-  }
-}
-
 .dr {
 position: absolute;
   bottom: 16px; 
@@ -179,7 +165,6 @@ position: absolute;
 
 @media (min-width: 1000px) and (max-width: 1199px) {
   .category-container {
-    // width: 900px;
     width: 1000px;
   }
 }
@@ -187,22 +172,30 @@ position: absolute;
 @media (min-width: 760px) and (max-width: 999px) {
   .category-container {
     width: 750px;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 20px;
+    padding-right: 10px;
   }
 
   .category-section {
-    height: 1650px;
+    height: 930px;
+  }
+
+  .card {
+    width: 49% !important;
   }
 }
 
 @media (min-width: 0) and (max-width: 759px) {
   .category-container {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 20px;
+    padding-right: 10px;
   }
 
   .category-section {
-    height: 1650px;
+    height: 930px;
+  }
+
+  .card {
+    width: 49% !important;
   }
 }
