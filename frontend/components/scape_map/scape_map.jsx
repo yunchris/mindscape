@@ -5,7 +5,7 @@ import { withRouter} from 'react-router-dom';
 
 const mapOptions = {
   center: { lat: 37.590106, lng: -122.229460},
-  zoom: 10,
+  zoom: 9,
   disableDefaultUI: true,
   zoomControl: true
 };

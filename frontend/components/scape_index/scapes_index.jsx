@@ -47,7 +47,7 @@ class ScapesIndex extends React.Component {
             <div className="filter-box">
               <input type="text" className="scapes-calendar" name="calendar" placeholder="Dates..." />
               
-              {['scifi', 'romance', 'horror', 'fantasy', 'past', 'present', 'all'].map((genre, idx) => 
+              {['scifi', 'fantasy', 'horror', 'romance', 'past', 'present', 'all'].map((genre, idx) => 
                   <button key={idx}
                           id={`category-${idx}`} 
                           className={`scapes-category-button${this.props.category === genre ? ' active' : ''}`}

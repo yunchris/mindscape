@@ -32,7 +32,7 @@ class LoginForm extends React.Component {
 
   // Experiment
   demo(user) {
-    const intervalSpeed = 100;
+    const intervalSpeed = 70;
     const { email, password } = user;
     const demoEmailTime = email.length * intervalSpeed;
     const demoPasswordTime = password.length * intervalSpeed;
