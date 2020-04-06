@@ -5,3 +5,34 @@
   background-position: top;
   background-repeat: no-repeat;
 }
+
+@media only screen and (min-width: 1200px) {
+  .content-container {
+    width: 1100px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+  .content-container {
+    width: 1000px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (min-width: 760px) and (max-width: 999px) {
+  .content-container {
+    width: 850px;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
+@media (min-width: 0) and (max-width: 759px) {
+  .content-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

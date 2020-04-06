@@ -52,7 +52,7 @@ class ScapesIndex extends React.Component {
                           id={`category-${idx}`} 
                           className={`scapes-category-button${this.props.category === genre ? ' active' : ''}`}
                           onClick={() => {
-                            this.categoryClick(genre) // assignment is to make clicking button change URL instead of changing state... (componentdidupdate?)
+                            this.categoryClick(genre) 
                           }}>
                     {idx === 0 ? "Sci-Fi" : idx === 6 ? "All..." : genre[0].toUpperCase() + genre.slice(1)}
                   </button>

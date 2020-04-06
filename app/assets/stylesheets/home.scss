@@ -48,29 +48,3 @@
   }
 }
 
-@media only screen and (min-width: 1200px) {
-  .content-container {
-    width: 1100px;
-  }
-}
-
-@media (min-width: 1000px) and (max-width: 1199px) {
-  .content-container {
-    width: 1000px;
-  }
-}
-
-@media (min-width: 760px) and (max-width: 999px) {
-  .content-container {
-    width: 750px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
-
-@media (min-width: 0) and (max-width: 759px) {
-  .content-container {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
