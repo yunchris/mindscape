@@ -43,6 +43,6 @@
   },
   "homepage": "https://github.com/yunchris/mindscape#readme",
   "devDependencies": {
-    "webpack-cli": "^3.3.10"
+    "webpack-cli": "^3.3.12"
   }
 }
